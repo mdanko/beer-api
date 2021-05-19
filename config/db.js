@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import Beer from "../models/beerModel.js";
 
 const connectDB = async () => {
   try {

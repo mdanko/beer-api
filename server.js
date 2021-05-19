@@ -1,4 +1,5 @@
 import connectDB from "./config/db.js";
+import beerRoutes from "./routes/beerRoute.js";
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
@@ -12,6 +13,7 @@ const app = express();
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use("/api/beer", beerRoutes);
 
 const PORT = process.env.PORT || 5000;
 
